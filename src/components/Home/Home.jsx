@@ -24,8 +24,16 @@ import { GiWallet } from "react-icons/gi";
 import { IoWallet } from "react-icons/io5";
 import { LuWaves } from "react-icons/lu";
 import { BsSoundwave } from "react-icons/bs";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from "recharts";
-import bassIcon from "../../assets/bass_12671256-removebg-preview.png"
+import { PieChart, Pie, Cell } from "recharts";
+import bassIcon from "../../assets/bass_12671256-removebg-preview.png";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { FaRegHandshake } from "react-icons/fa6";
+import { MdArticle } from "react-icons/md";
+import { SlLocationPin } from "react-icons/sl";
+import { FaRegComments } from "react-icons/fa";
+
+import Table from "../Table/Table"
+
 const data = [
   { name: "Facebook", value: 33 },
   { name: "Youtube", value: 55 },
@@ -97,8 +105,11 @@ const gradientOffset = () => {
 
 const off = gradientOffset();
 
+
+
+
 const Home = () => (
-  <div>
+  <div className="font-inter">
     <Navbar />
     <div className="flex bg-[#121421]">
       <div className="w-[293px] bg-[#242935] p-10  ">
@@ -243,8 +254,8 @@ const Home = () => (
                 <div className="flex justify-between gap-4">
                   <div className="flex gap-4 ml-20">
                     <a href="">DAILY</a>
-                    <a href="">WEEKly</a>
-                    <a href="">MONTHLY</a>
+                    <a  href="">WEEKlY</a>
+                    <a className="underline text-[#58a098]" href="">MONTHLY</a>
                     <a href="">YEARLY</a>
                   </div>
                   <div className="flex items-center gap-1">
@@ -394,19 +405,101 @@ const Home = () => (
                 </select>
               </div>
               <div>
-              <BsSoundwave size={100} />
+                <BsSoundwave size={100} />
               </div>
             </div>
           </div>
           <div className="bg-[#fca33d] p-4 rounded-lg">
             <p>Revinue Status</p>
             <div className="flex items-center justify-between gap-5 py-4">
-              <img color="white" src={bassIcon} className="size-20 text-white" alt="" />
+              <img
+                color="white"
+                src={bassIcon}
+                className="size-20 text-white"
+                alt=""
+              />
               <div>
                 <h4 className="text-2xl font-bold">$ 432</h4>
                 <p>Jan 01 - Jan 10</p>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 p-4 gap-4">
+          <div className="col-span-4 bg-[#242935] rounded-lg p-4">
+            <p className="mb-6">Recent Activities</p>
+            <div className="flex justify-between items-center  py-4">
+              <p className="text-[#7e828f]">40 Mins ago</p>
+              <div className="flex gap-6 w-[240px]">
+                <IoIosCheckmarkCircleOutline
+                  className="p-2 size-10 rounded-full bg-[#e84782]"
+                  size={30}
+                />
+                <div>
+                  <h4>Task Updated</h4>
+                  <p className="text-[#7e828f]">Nikalai updated a task</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center py-4">
+              <p className="text-[#7e828f]">1 day ago</p>
+
+              <div className="flex gap-6 w-[240px]">
+                <FaRegHandshake
+                  className="p-2 size-10 rounded-full bg-[#815fb8]"
+                  size={30}
+                />
+                <div>
+                  <h4>Deal Added</h4>
+                  <p className="text-[#7e828f]">Panshi updated a task</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center py-4">
+              <p className="text-[#7e828f]">40 Mins ago</p>
+              <div className="flex gap-6 w-[240px]">
+                <MdArticle
+                  className="p-2 size-10 rounded-full bg-[#6bcaf1]"
+                  size={30}
+                />
+                <div>
+                  <h4>Publish Article</h4>
+                  <p className="text-[#7e828f]">Sanshi updated a Article</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center py-4">
+              <p className="text-[#7e828f]">1 day ago</p>
+
+              <div className="flex  gap-6 w-[240px]">
+                <SlLocationPin
+                  className="p-2 size-10 rounded-full bg-[#feb82a]"
+                  size={30}
+                />
+                <div>
+                  <h4>Dock Updated</h4>
+                  <p className="text-[#7e828f]">Manshi updated a Dock</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center py-4">
+              <p className="text-[#7e828f]">1 day ago</p>
+
+              <div className="flex gap-6 w-[240px]">
+                <FaRegComments
+                  className="p-2 size-10 rounded-full bg-[#47f24d]"
+                  size={30}
+                />
+                <div>
+                  <h4>Replyed Comment</h4>
+                  <p className="text-[#7e828f]">Fanshi Added a comment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-span-8 bg-[#242935] rounded-lg ">
+            <Table/>
           </div>
         </div>
       </div>

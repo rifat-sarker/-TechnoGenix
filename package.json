@@ -10,12 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.16.4",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
+    "mui-datatables": "^4.3.0",
+    "primereact": "^10.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-google-charts": "^4.0.1",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.1",
-    "recharts": "^2.12.7"
+    "recharts": "^2.12.7",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
